@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css_XTech/style-cadastro.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="./js/cadastroEmpresa.js"></script>
+  <title>Cadastro da Empresa</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <img src="./dashtrack/img/logo_mush_marrom.png" alt="" height="65px">
+    <nav class="header_nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#route_mushtrack">MushTrack</a></li>
+        <a href="index.html#simulador">Simulador</a>
+        <li><a href="index.html#sobreNos-grupo">Sobre Nós</a></li>
+        <li><a href="index.html#stakeholders">Stakeholders</a></li>
+        <li><a class="button_4" id="login_a" href="loginEmpresa.html">Cadastro/Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="banner">
+    <div class="cadastro">
+      <div class="container">
+        <div class="card-cadastro">
+          <img id="imgLogo" src="./dashtrack/img/logo_mush_marrom.png" alt="Logo MushTrack">
+
+          <div class="formulario">
+            <div class="coluna-esquerda">
+              <div class="campo">
+                <input id="input_cnpj" type="text" placeholder="CNPJ - XXXXXXXXXXXXXX">
+              </div>
+              <div class="campo">
+                <input id="input_nomeEmpresa" type="text" placeholder="Nome da empresa">
+              </div>
+              <div class="campo">
+                <input id="input_nomeRepresentante" type="text" placeholder="Nome do Representante">
+              </div>
+            </div>
+
+            <div class="coluna-direita">
+              <div class="campo">
+                <input id="input_email" type="text" placeholder="Email">
+              </div>
+              <div class="campo">
+                <input id="input_senha" type="password" placeholder="Senha">
+              </div>
+              <div class="campo">
+                <input id="input_confirmeSenha" type="password" placeholder="Confirmar senha">
+              </div>
+            </div>
+          </div>
+          <div class="button" onclick="cadastrar()" id="button_home">
+            <a href="#">Cadastrar</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MushTrack Dashboard</title>
+  <link rel="shortcut icon" href="img/logo_mush.png" type="image/x-icon">
+  <link rel="stylesheet" href="css_dashtrack/menu.css">
+  <link rel="stylesheet" href="css_dashtrack/Dashboard_estufas.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <!-- menu -->
+    <div class="lateral">
+      <div class="titulo">
+          <div class="card-logo">
+              <a href="home.html">
+                  <img src="./img/logo_mush.png" style="width: 40px; height: 40px;" alt="Logo MushTrack" />
+              </a>
+          </div>
+          <h2>MushTrack</h2>
+      </div>
+      
+      <ul class="menu">
+          <li id="menuEstufas" class="ativo">
+              <a href="home.html">
+                  <img src="img/icone_dashboard.png" alt="Dashboard" />
+                  Estufas
+              </a>
+          </li>
+          <li id="menuSensores">
+              <a href="cadastroSensor.html">
+                  <img src="img/Group.png" alt="Sensores" />
+                  Sensores
+              </a>
+          </li>
+          <li id="menuCadastroEstufas" >
+              <a href="cadastroEstufas.html">
+                  <img src="img/Group.png" alt="Cadastro" />
+                  Cadastro estufas
+              </a>
+          </li>
+          <li id="menuSair">
+              <a href="#">
+                  <img src="img/sair.png" alt="Sair" />
+                  Sair
+              </a>
+          </li>
+      </ul>
+  </div>
+
+    <div class="main-content">
+
+      <div class="estufa">
+        <h2>Dashboard / Estufas / Shiitake</h2>
+      </div>
+
+      <!-- alert -->
+      <section class="alertas">
+        <div class="geral">
+          <div class="container">
+           
+           
+          </div>
+          <div class="container-status">
+
+            <div class="status-container">
+              <div class="titulo">
+                <h1>Status:</h1>
+              </div>
+              <div class="status">
+                <img src="img/verde.png" alt="Status normal">
+                <p>Normal</p>
+              </div>
+              <div class="status">
+                <img src="img/amarelo.png" alt="Status em alerta">
+                <p>Em alerta</p>
+              </div>
+              <div class="status">
+                <img src="img/red.png" alt="Status crítico">
+                <p>Crítico</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- stats -->
+
+
+
+
+      <div class="conteudo-geral">
+        <!-- Cogumelos -->
+        <div class="container-cogumelos">
+          <div class="Cogumelo">
+            <a href="estufasShimeji.html" style="text-decoration: none; color: white;">
+              <div class="conteudo">
+                <h2>Shimeji</h2>
+                <img src="img/shimeji_card.png" alt="Shimeji">
+              </div>
+            </a>
+          </div>
+
+          <div class="Cogumelo">
+            <a href="./estufasShiitake.html" style="text-decoration: none; color: white;">
+              <div class="conteudo">
+                <h2>Shiitake</h2>
+                <img src="img/shiitake_card.png" alt="Shiitake">
+              </div>
+            </a>
+          </div>
+
+          <div class="Cogumelo">
+            <a href="estufasParis.html" style="text-decoration: none; color: white;">
+              <div class="conteudo">
+                <h2>Champignon de <br> Paris</h2>
+                <img src="img/champignon_card.png" alt="Champignon de Paris">
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- cards  estufas -->
+        <div class="cards-container">
+          <div class="bloco1" id="bloco_cards">
+           
+          </div>
+
+        </div>
+      </div>
+
+
+</body>
+
+</html>
+<script src="../js/estufas.js">
+</script>
+<script>
+  window.onload = function () {
+    buscarTodasEstufas('Shiitake')
+  }
+</script>

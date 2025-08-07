@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard MushTrack</title>
+  <link rel="stylesheet" href="css_dashtrack/menu.css">
+  <link rel="stylesheet" href="./css_dashtrack/dashtrack_graficos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+  <div class="header">
+    <!-- menu -->
+    <div class="lateral">
+      <div class="titulo">
+        <div class="card-logo">
+          <a href="home.html">
+            <img src="./img/logo_mush.png" style="width: 40px; height: 40px;" alt="Logo MushTrack" />
+          </a>
+        </div>
+        <h2>MushTrack</h2>
+      </div>
+
+      <ul class="menu">
+        <li id="menuEstufas" class="ativo">
+          <a href="home.html">
+            <img src="img/icone_dashboard.png" alt="Dashboard" />
+            Estufas
+          </a>
+        </li>
+        <li id="menuSensores">
+          <a href="cadastroSensor.html">
+            <img src="img/Group.png" alt="Sensores" />
+            Sensores
+          </a>
+        </li>
+        <li id="menuCadastroEstufas">
+          <a href="cadastroEstufas.html">
+            <img src="img/Group.png" alt="Cadastro" />
+            Cadastro estufas
+          </a>
+        </li>
+        <li id="menuSair">
+          <a href="#">
+            <img src="img/sair.png" alt="Sair" />
+            Sair
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <!-- Header da estufa -->
+      <div class="estufa">
+        <h2>Estufa 1</h2>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="indicadores">
+        <p>Indicadores</p>
+        <div class="cards-container">
+          <div class="card1">
+            <img src="img/red.png" alt="" />
+            <h3 id="status_estufa">Crítico</h3>
+            <p>Status da Estufa</p>
+            <span>Temperatura e Umidade</span>
+          </div>
+          <div class="card1">
+            <img src="img/frutufucacao.png" alt="" />
+            <h3 id="nome_estagio"></h3>
+            <p>Estágio da Estufa</p>
+          </div>
+
+          <div class="card1">
+            <img src="img/ampulheta.png" alt="" />
+            <h3>Temperatura</h3>
+            <p id="id_minima">Mínima:</p>
+            <p id="id_maxima">Máxima:</p>
+          </div>
+          <div class="card1">
+            <img src="img/ampulheta.png" alt="" />
+            <h3>Umidade</h3>
+            <p id="id_minima_umidade">Mínima:</p>
+            <p id="id_maxima_umidade">Máxima:</p>
+          </div>
+          <div class="card1">
+            <img src="img/consulta.png" alt="" />
+            <h3>Consultar</h3>
+            <p>Hisórico da estufa</p>
+            <span onclick="mostrarHistorico()">Clique aqui</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <div class="graficos">
+        <div id="alerta">
+        </div>
+
+        <div class="grafico">
+          <h4>Sensores de Temperatura (°C)</h4>
+          <canvas id="graficoTemperatura"></canvas>
+        </div>
+        <div class="grafico">
+          <h4>Sensores de umidade (%)</h4>
+          <canvas id="graficoUmidade"></canvas>
+        </div>
+      </div>
+
+      <div id="popupHistorico" class="popup-container">
+        <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <h3>Histórico da Estufa</h3>
+          <div class="historico-dados">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+</script>
+
+</html>
+<script src="../js/dash.js"></script>
+<script src="../js/alertas.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    buscarEstagio();
+    buscarDadosEstufa()
+    function atualizarDados() {
+      buscarDadosEstufa()
+    }
+    setInterval(atualizarDados, 5000)
+    buscarParametrosEstufa()
+    exibirMetricas()
+  });
+</script>

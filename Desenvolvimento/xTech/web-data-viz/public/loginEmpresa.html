@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css_XTech/style-login.css">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/xTechWhite.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/loginEmpresa.js"></script>
+
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <img src="./dashtrack/img/logo_mush_marrom.png" alt="" height="65px">
+    <nav class="header_nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#route_mushtrack">MushTrack</a></li>
+        <a href="index.html#simulador">Simulador</a>
+        <li><a href="index.html#sobreNos-grupo">Sobre Nós</a></li>
+        <li><a href="index.html#stakeholders">Stakeholders</a></li>
+        <li><a class="button_4" id="login_a" href="loginEmpresa.html">Cadastro/Login</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="login">
+        <div class="container">
+            <div class="card-login">
+                <img id="imgLogo" src="./dashtrack/img/logo_mush_marrom.png" alt="Logo MushTrack">
+                <div class="formulario">
+                    <div class="campo">
+                        <input id="email_input" type="text" placeholder="Email">
+                    </div>
+                    <div class="campo">
+                        <input id="senha_input" type="password" placeholder="Senha">
+                    </div>
+                    <div class="button" id="button_home" onclick="entrar()">
+                        <a>Entrar</a>
+                    </div>
+                    <div class="Registrar">
+                        <a href="./cadastroEmpresa.html">Não possui conta? Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
